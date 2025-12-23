@@ -24,12 +24,24 @@ export default function Tools() {
         <Link to="/">Home</Link>
       </div>
 
-      <div id="tools-wrap" style={{ display: "grid", gap: 14 }}>
+        <div
+          id="tools-wrap"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: 14,
+          }}>
         {tools.map((t) => (
           <div
             key={t.id}
             data-title={`${t.title} ${t.category} ${t.summary}`}
-            style={{ border: "1px solid #ddd", borderRadius: 10, padding: 14 }}
+            style={{
+              border: "1px solid #ddd",
+              borderRadius: 10,
+              padding: 14,
+              background: "#fff",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+            }}
           >
             <h3 style={{ margin: "0 0 6px 0" }}>{t.title}</h3>
             <div style={{ fontSize: 13, opacity: 0.8 }}>{t.summary}</div>
