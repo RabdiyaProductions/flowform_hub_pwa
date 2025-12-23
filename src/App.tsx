@@ -12,12 +12,10 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/tools" element={<Tools />} />
-      <Route path="/tools/:id" element={<ToolDetail />} />
+      <Route path="/tools/:slug" element={<ToolDetail />} />
       <Route path="/chat" element={<ChatBot />} />
-
       <Route path="/success" element={<Success />} />
       <Route path="/cancel" element={<Cancel />} />
-
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
