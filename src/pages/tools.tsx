@@ -39,7 +39,7 @@ export default function Tools() {
             </div>
 
             <div style={{ display: "flex", gap: 12, marginTop: 10 }}>
-              <Link to={`/tools/${tool.id}`}>Open</Link>
+              <Link to={`/tools/${t.slug}`}>Open</Link>
               <Link to="/chatbot">Open ChatBot</Link>
               {t.stripeUrl ? (
                 <a href={t.stripeUrl}
