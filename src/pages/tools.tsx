@@ -42,9 +42,14 @@ export default function Tools() {
               <Link to={`/tools/${tool.id}`}>Open</Link>
               <Link to="/chatbot">Open ChatBot</Link>
               {t.stripeUrl ? (
-                <a href={t.stripeUrl} target="_blank" rel="noreferrer">
-                  Buy
+                <a href={t.stripeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => localStorage.setItem("ff_last_tool_slug", t.slug)}
+                >
+                Buy
                 </a>
+
               ) : (
                 <span style={{ opacity: 0.5 }}>Buy (pending)</span>
               )}
